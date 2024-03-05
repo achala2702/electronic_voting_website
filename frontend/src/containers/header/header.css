@@ -1,0 +1,57 @@
+#logo_img {
+    width: 8vh;
+    height: 8vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 4vh;
+}
+
+#heading {
+    align-items: center;
+    text-align: center;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+.header {
+    background: linear-gradient(45deg, #B72323 60%, #080707);
+    color:#ffffff;
+    height: 16vh;
+    display: flex;
+    /*center items horizontally*/
+    justify-content: center;
+    /*center items vertically*/
+    align-items: center;
+    /*allows absolute positioning relative to the container*/
+    position: relative;
+}
+
+/*for the devices smaller than 500px (mobile)*/
+@media only screen and (max-width: 500px) {
+    #logo_img {
+        width: 6vh;
+        height: 6vh;
+        margin:  2vh;
+    }
+    #heading {
+        font-size: 20px;
+    }
+    .header {
+        height: 10vh;
+    }
+}
+/*for the devices larger than 2000px*/
+@media only screen and (min-width:2000px) {
+    #logo_img {
+        width: 8vh;
+        height: 8vh;
+        margin:  6vh;
+    }
+    #heading {
+        font-size: 100px;
+    }
+    .header {
+        height: 20vh;
+    }
+}
