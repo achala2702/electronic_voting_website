@@ -18,8 +18,8 @@ ChartJS.register(
 
 const BarChart = () => {
 
-  const names = ["first", "second", "third"]
-  const votes = [100, 300, 400]
+  let names = ["first", "second", "third"]
+  let votes = [100, 300, 400]
 
   const data = {
     labels: names,

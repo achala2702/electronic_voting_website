@@ -1,0 +1,8 @@
+#pie-chart {
+    width: 35%;
+}
+@media screen and (max-width: 500px) {
+    #pie-chart {
+        width: auto;
+    }
+}
