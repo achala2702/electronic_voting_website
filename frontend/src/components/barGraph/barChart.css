@@ -1,0 +1,8 @@
+#bar-chart {
+    width: 50%;
+}
+@media screen and (max-width: 500px){
+    #bar-chart {
+        width:auto;
+    }
+}

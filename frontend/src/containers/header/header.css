@@ -15,7 +15,7 @@
 }
 
 .header {
-    background: linear-gradient(45deg, #B72323 60%, #080707);
+    background: linear-gradient(90deg, #B72323 50%, #080707);
     color:#ffffff;
     height: 16vh;
     display: flex;
