@@ -11,7 +11,8 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:3000"
+        origin: "http://localhost:3000",
+        methods: ["GET"]
     }
 });
 
@@ -39,7 +40,9 @@ app.get('/', (req, res)=>{
 
 //sending data to the frontend
 io.on("connection", (socket)=>{
-    console.log(`Client Connected: ${socket.id}`)
+    console.log(`Client Connected: ${socket.id}`);
+
+    socket.emit("candidatesData", candidates);
 })
 
 server.listen(port, ()=>{

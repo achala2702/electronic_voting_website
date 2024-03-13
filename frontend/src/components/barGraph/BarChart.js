@@ -16,15 +16,16 @@ ChartJS.register(
   Legend
 )
 
-const BarChart = () => {
+const BarChart = ({candidates}) => {
 
-  let names = ["first", "second", "third"]
-  let votes = [100, 300, 400]
+  //extracting the names and the votecount from the candidats objects
+  let names = candidates.map(candidate => candidate.name)
+  let votes = candidates.map(candidate => candidate.voteCount)
 
   const data = {
     labels: names,
     datasets: [{
-      label: "Vote Count",
+      label: "No of Votes per Candidates",
       data: votes,
       backgroundColor: "aqua",
       borderColor: "black",

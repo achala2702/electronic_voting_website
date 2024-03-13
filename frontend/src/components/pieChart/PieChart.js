@@ -15,9 +15,12 @@ ChartJS.register(
 );
 
 
-const PieChart = () => {
+const PieChart = ({candidates}) => {
 
-  let castedVotes = 100;
+  //assigning votes of the candidates to a list
+  let votes = candidates.map(candidate => candidate.voteCount)
+  
+  let castedVotes = votes.length > 0 ? votes.reduce((total, currentVal) => total + currentVal) : 0;
   const totalVotes = 250
   let remainingVotes = totalVotes - castedVotes;
 
@@ -25,7 +28,7 @@ const PieChart = () => {
     labels: ["Remaining Votes", "Casted Votes"],
     datasets: [{
       label: "pie chart",
-      data: [castedVotes, remainingVotes],
+      data: [remainingVotes, castedVotes],
       backgroundColor: ["aqua", "black"],
       borderColor: "black",
       borderWidth: 1,
