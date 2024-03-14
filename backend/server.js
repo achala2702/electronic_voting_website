@@ -18,10 +18,10 @@ const io = new Server(server, {
 
 
 //getting candidate names
-const candidateNames = ["name1", "name2", "name3", "name4"];
+const candidateNames = ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8"];
 
 //getting their voteCount
-const voteCounts = [110, 200, 400, 50]
+const voteCounts = [110, 200, 400, 50, 150, 60, 100, 150]
 
 //mapping the candidateNames and voteCounts into an array of obejcts
 const candidates = candidateNames.map((name, index)=>({

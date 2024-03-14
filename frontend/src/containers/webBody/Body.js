@@ -35,7 +35,7 @@ const Body = () => {
         <BarChart candidates = {candidatesArr}/>
         <PieChart candidates = {candidatesArr}/>
       </div>
-      <CandidateCon/>
+      <CandidateCon candidates = {candidatesArr}/>
     </div>
   )
 }

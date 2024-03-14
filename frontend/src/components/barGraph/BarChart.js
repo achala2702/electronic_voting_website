@@ -35,7 +35,7 @@ const BarChart = ({candidates}) => {
 
   const options = {
     responsive: true, // makes chart resposive
-    maintainAspectRatio: false //turn off the automatic aspect ratio
+    maintainAspectRatio: false, //turn off the automatic aspect ratio
   }
 
   return (

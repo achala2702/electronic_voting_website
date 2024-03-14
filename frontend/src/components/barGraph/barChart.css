@@ -6,3 +6,8 @@
         width:auto;
     }
 }
+@media screen and (min-width: 2000px){
+    #bar-chart {
+        font-size: 500px;
+    }
+}

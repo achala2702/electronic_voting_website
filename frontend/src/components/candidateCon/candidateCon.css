@@ -1,0 +1,86 @@
+#candi-container {
+    padding-top: 5vh;
+    margin: 5vh;
+    width: auto;
+    display: flex; /* Enables Flexbox */
+    justify-content: left; /* Centers the .candidate-containers horizontally */
+    flex-wrap: wrap;
+    justify-content: row/*space-between*/;
+    align-items: flex-start;
+    gap: 8vh;
+}
+
+.candidate-container {
+    margin: 2vh;
+    background: #f0f0f0; /* Example background color */
+    border-radius: 50px; /* Rounded corners */
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.5); /*Adds a shadow */
+    padding: 20px; /* Spacing inside the .card */
+    text-align: center; /* Aligns text in the center */
+}
+
+.candidate-img {
+    width: 25vh;
+    height: 25vh;
+    margin: 2px;
+    border-radius: 50%; /* Makes the image round */
+    max-width: 40vh;
+    max-height: 40vh;
+    margin: auto;
+    margin-bottom: 5px; /* Space between the image and the text */
+    object-fit: cover;
+}
+
+.candidate-voteCount {
+    background-color: #f06b48;
+    color: #ffffff;
+    width: auto;
+    padding: 10px;
+    margin: auto;
+    margin-top: 2vh;
+    border-radius: 20px;
+}
+
+.candiate-name {
+    height: 10px;
+    margin-top: 4px;
+}
+
+/*for the devices smaller than 500px*/
+@media only screen and (max-width: 500px) {
+    .candidate-container {
+        margin: 4vh auto;
+    }
+}
+
+/*for the devices between 500px and 1100px*/
+@media only screen and (min-width: 500px) and (max-width: 1100px) {
+    .candidate-container {
+        width: 20vh;
+    }
+    .candidate-img {
+        width: 20vh;
+        height: 20vh;
+    }
+    #candi-container {
+        gap: 12vh;
+    }
+}
+
+/*for devices between 1150px and 1450px*/
+@media screen and (min-width: 1150px) and (max-width: 1450px) {
+    #candi-container {
+        gap: 2vh;
+    }
+}
+
+/*for the devices larger than 2000px*/
+@media only screen and (min-width:2000px) {
+
+    #candi-container {
+        gap: 4vh;
+    }
+    p {
+        font-size: 40px;
+    }
+}
