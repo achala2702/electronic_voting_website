@@ -1,6 +1,6 @@
 import React from 'react'
 import "./candidateCon.css"
-import image from "../assets/img_1.jpg"
+import image from "../assets/Person.png"
 
 const CandidateCon = ({candidates}) => {
 
