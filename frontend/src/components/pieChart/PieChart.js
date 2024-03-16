@@ -15,13 +15,13 @@ ChartJS.register(
 );
 
 
-const PieChart = ({candidates}) => {
+const PieChart = ({candidates, total}) => {
 
   //assigning votes of the candidates to a list
   let votes = candidates.map(candidate => candidate.voteCount)
   
   let castedVotes = votes.length > 0 ? votes.reduce((total, currentVal) => total + currentVal) : 0;
-  const totalVotes = 250
+  const totalVotes = total
   let remainingVotes = totalVotes - castedVotes;
 
   const data = {

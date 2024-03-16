@@ -8,6 +8,7 @@ import io from "socket.io-client";
 const Body = () => {
 
   const [candidatesArr, setCandidates] = useState([]);
+  const [total_votes, setTotalVotes] = useState();
   
   useEffect(() => {
 
@@ -18,6 +19,11 @@ const Body = () => {
     socket.on("candidatesData", (candidates) => {
       setCandidates(candidates);
     });
+
+    //getting the total Votes count from the server
+    socket.on("total", (totalVotes) => {
+      setTotalVotes(totalVotes);
+    })
 
     //eventlistner for disconnect event
     socket.on("disconnect", ()=> {
@@ -33,7 +39,7 @@ const Body = () => {
     <div>
       <div id="chart-container">
         <BarChart candidates = {candidatesArr}/>
-        <PieChart candidates = {candidatesArr}/>
+        <PieChart candidates = {candidatesArr} total ={total_votes}/>
       </div>
       <CandidateCon candidates = {candidatesArr}/>
     </div>

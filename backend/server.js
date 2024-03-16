@@ -18,10 +18,13 @@ const io = new Server(server, {
 
 
 //getting candidate names
-const candidateNames = ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8"];
+let candidateNames = ["name1", "name2", "name3", "name4", "name5", "name6", "name7", "name8"];
 
 //getting their voteCount
-const voteCounts = [110, 200, 400, 50, 150, 60, 100, 150]
+let voteCounts = [110, 200, 400, 50, 150, 60, 100, 100]
+
+// getting the total vote count by getting the total count of registered voters
+let totalVotes = 3000;
 
 //mapping the candidateNames and voteCounts into an array of obejcts
 const candidates = candidateNames.map((name, index)=>({
@@ -42,7 +45,11 @@ app.get('/', (req, res)=>{
 io.on("connection", (socket)=>{
     console.log(`Client Connected: ${socket.id}`);
 
+    //emiting the candidates data
     socket.emit("candidatesData", candidates);
+
+    //emiting the total votes count
+    socket.emit("total", totalVotes);
 })
 
 server.listen(port, ()=>{
